@@ -1,4 +1,28 @@
 baseURL = 'https://chaiwat.ca/'
 languageCode = 'en-us'
 title = "Chaiwat's Blog"
+author = 'Chaiwat S'
+copyright = "Copyright © 2025, Chaiwat Shuetrakoonpaiboon."
 theme = 'hugo-bearblog'
+
+enableRobotsTXT = true
+
+disableKinds = ["taxonomy"]
+ignoreErrors = ["error-disable-taxonomy"]
+
+[permalinks]
+  blog = "/:slug/"
+  tags = "/blog/:slug"
+
+[params]
+  description = "Chaiwat's Blog"
+  favicon = "images/favicon.png"
+  images = ["images/share.png"]
+  title = "Chaiwat's Blog"
+
+[markup]
+  [markup.highlight]
+    style = 'friendly'
+    lineNos = true
+    lineNumbersInTable = false
+    codeFences = true
