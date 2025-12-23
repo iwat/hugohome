@@ -7,13 +7,14 @@ media_folder: "static/img"
 public_folder: "img"
 
 collections:
-  - name: "posts"
-    label: "Post"
-    folder: "content/posts"
-    path: "{{slug}}/index"
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    path: "{{year}}-{{month}}-{{day}}-{{slug}}.md"
     create: true
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Intro Blurb", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Intro Blurb", name: "description", widget: "text" }
+      - { label: "Tags", name: "tags", widget: "list", default: [] }
+      - { label: "Body", name: "body", widget: "markdown" }
